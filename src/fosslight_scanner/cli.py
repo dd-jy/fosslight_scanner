@@ -3,6 +3,7 @@
 # Copyright (c) 2022 LG Electronics Inc.
 # SPDX-License-Identifier: Apache-2.0
 import sys
+import os
 from argparse import ArgumentParser
 from ._help import print_help_msg
 from .fosslight_scanner import run_main, PKG_NAME

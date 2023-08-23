@@ -377,7 +377,8 @@ def run_main(mode, path_arg, dep_arguments, output_file_or_dir, file_format, url
                 src_path, dep_arguments, url_to_analyze = get_input_mode(_executed_path, mode)
                 if os.path.exists(src_path):
                     raise Exception("Cannot enter the existed source path.")
-
+            if not os.path.isdir(src_path):
+                raise Exception("Need to enter the path only in p option.")
             if not hide_progressbar:
                 timer = TimerThread()
                 timer.setDaemon(True)
